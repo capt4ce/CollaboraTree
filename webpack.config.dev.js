@@ -40,7 +40,7 @@ export default merge.smart(baseConfig, {
     target: 'electron-renderer',
 
     entry: [
-        'react-hot-loader/patch',
+        // 'react-hot-loader/patch',
         `webpack-dev-server/client?http://localhost:${port}/`,
         'webpack/hot/only-dev-server',
         path.join(__dirname, 'react/app.js'),
@@ -64,8 +64,8 @@ export default merge.smart(baseConfig, {
                             // renderer process. The 'transform-*' plugins must be included
                             // before react-hot-loader/babel
                             'transform-class-properties',
-                            'transform-es2015-classes',
-                            'react-hot-loader/babel'
+                            'transform-es2015-classes'//,
+                            // 'react-hot-loader/babel'
                         ],
                     }
                 }
